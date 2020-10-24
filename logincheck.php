@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <?php
 
 $uid=$_REQUEST["uid"];
