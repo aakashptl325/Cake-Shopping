@@ -7,6 +7,12 @@ echo("<style>.info:hover {
     color: blue;
   }</style>");  
 
+  if(!isset($_SESSION["uid"]))
+  {
+      echo("Login with your accout&emsp;&emsp;<button  onclick=document.location='http://localhost/CakeShop/login.php' class='btn btn-primary rounded' />Login</button>");
+      echo("<br/><hr/>");
+  }  
+
 echo("<h2>Themes for Cake</h2>");
 
 $con=mysqli_connect("localhost:3306","root","","cakedb");
@@ -20,9 +26,11 @@ while($row=mysqli_fetch_assoc($result))
 	$desc=$row["desc"];
     $charge=$row["charges"];
     $name=$row["name"];
-	echo("<div class='col'>");
-	echo("<br/><br/><button  onclick=document.location='http://localhost/CakeShop/SelectProduct.php?cid=$themid' class='btn info' title='$desc'><img src='Images/$name.jpg' width='500' height='300' class='rounded' /><br/>$name</button>");
+	echo("<div class='col-md-6'>");
+	echo("<br/><br/><button  onclick=document.location='http://localhost/CakeShop/SelectCake.php?id=$themid' class='btn info' title='$desc'><img src='Images/$name.jpg' width='400' height='300' class='rounded' /><br/>$name</button>");
 	echo("</div>");
 }
+echo("<br/>");
 echo("</div>");
+
 ?>
