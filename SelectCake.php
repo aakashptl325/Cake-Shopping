@@ -79,7 +79,9 @@
   echo("</select><br/><br/>");
 
   echo("<h4>Eggless <img src='Images/eggless.png' width='25' height='25' />:&emsp;&emsp;<input type='checkbox' name='egg' /></h4><br/>");
-  echo("<lable>Your Wishes On the Cake </lable><br/><textarea name='comments' row='7' cols='30'></textarea>");
+  echo("<lable>Your Wishes On the Cake </lable><br/><textarea name='comments' row='7' cols='30'></textarea><br/><br/><br/>");
+  echo("&emsp;&emsp;&emsp;<input type='submit' value='Submit' />");
+
   echo("</div>");
   echo("</div>");
   echo("</form>");
